@@ -35,7 +35,7 @@ br{margin-bottom: 1px black;}
   </tr>
   <tr ng-repeat="x in products | limitTo:selectedLimit | filter:selectedCategory | filter:nameFilter | filter:categoryFilter ">
     <td>{{x.numepr}}</td>
-    <td>{{x.pret|currency}}</td>
+    <td>{{x.pret|currency : "Lei "}}</td>
     <td>{{x.categorie}}</td>
   </tr>
 </table>
@@ -74,15 +74,15 @@ var app = angular.module('myApp', []);
 
 app.controller('productsCtrl', function($scope) {
     $scope.products = [
-        {numepr:'carne de gaina', pret: 5, categorie: "carne"},
-        {numepr:'carne de porc', pret: 5, categorie: "carne"},
-        {numepr:'morcov', pret: 1.1, categorie: "legume"},
-        {numepr:'smantana', pret: 2.6, categorie: "lactate"},
-        {numepr:'cartofi', pret: 1.2, categorie: "legume"},
-        {numepr:'ceapa', pret: 0.5, categorie: "legume"},
-        {numepr:'carne de vita', pret: 5.6, categorie: "carne"},
-        {numepr:'lapte', pret: 1.6, categorie: "lactate"},
-        {numepr:'cascaval', pret: 2.6, categorie: "lactate"}
+        {numepr:'carne de gaina', pret: 70, categorie: "carne"},
+        {numepr:'cartofi', pret: 11, categorie: "legume"},
+        {numepr:'morcov', pret: 10, categorie: "legume"},
+        {numepr:'smantana', pret: 25, categorie: "lactate"},
+        {numepr:'carne de vita', pret: 112, categorie: "carne"},
+	{numepr:'ceapa', pret: 5, categorie: "legume"},
+	{numepr:'lapte', pret: 20, categorie: "lactate"},
+        {numepr:'carne de porc', pret: 95, categorie: "carne"},
+        {numepr:'cascaval', pret: 50, categorie: "lactate"}
         ];	 
         
         $scope.enableMe = false;
