@@ -54,7 +54,7 @@ br{margin-bottom: 1px black;}
 <option ng-repeat="x in products" ng-value="x.numepr">{{x.numepr}}</option>
 </select> sau dupa categorie: <select ng-model="selectedCategory">
 <option>carne</option>
-<option>peste</option>
+<option>legume</option>
 <option>lactate</option>
 </select>
 </p><br>
